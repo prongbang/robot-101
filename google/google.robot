@@ -1,5 +1,6 @@
 *** Settings ***
-Library  SeleniumLibrary
+Library     SeleniumLibrary
+Library     String
 
 *** Variables ***
 
@@ -22,3 +23,13 @@ Library  SeleniumLibrary
     Wait Until Element Contains
     ...     xpath://*[@id="tvcap"]/div/div/div/div/h3/span      # Inspect -> click copy -> copy xpath
     ...     ดูเหล็กไหล
+    ${result}=  Get Text    id:resultStats
+    @{resultSplit}=   Split String    
+                ...     ${result}
+                ...     separator=${SPACE}
+                ...     max_split=3
+    Log To Console  .
+    Log To Console  0=>${resultSplit}[0]
+    Log To Console  1=>${resultSplit}[1]
+    Log To Console  2=>${resultSplit}[2]
+    Log To Console  3=>${resultSplit}[3]

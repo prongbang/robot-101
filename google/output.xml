@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.4 on darwin)" generated="20190924 12:34:29.110" rpa="false">
-<suite id="s1" name="Google" source="/Users/aycap/Development/Robot/google/google.robot">
+<robot generator="Robot 3.1.2 (Python 3.7.4 on darwin)" generated="20190924 14:34:38.080" rpa="false">
+<suite id="s1" name="Google" source="/Users/aycap/Development/Robot/Workspaces/robot-101/google/google.robot">
 <test id="s1-t1" name="ค้าหาคำว่าเหล็กไหล">
 <kw name="เข้าไปยังหน้าค้นหาของ Google">
 <kw name="Open Browser" library="SeleniumLibrary">
@@ -9,10 +9,10 @@
 <arg>http://www.google.com</arg>
 <arg>headlesschrome</arg>
 </arguments>
-<msg timestamp="20190924 12:34:29.233" level="INFO">Opening browser 'headlesschrome' to base url 'http://www.google.com'.</msg>
-<status status="PASS" starttime="20190924 12:34:29.232" endtime="20190924 12:34:31.555"></status>
+<msg timestamp="20190924 14:34:38.200" level="INFO">Opening browser 'headlesschrome' to base url 'http://www.google.com'.</msg>
+<status status="PASS" starttime="20190924 14:34:38.200" endtime="20190924 14:34:40.605"></status>
 </kw>
-<status status="PASS" starttime="20190924 12:34:29.232" endtime="20190924 12:34:31.555"></status>
+<status status="PASS" starttime="20190924 14:34:38.200" endtime="20190924 14:34:40.606"></status>
 </kw>
 <kw name="ค้าหาเหล็กไหล">
 <kw name="Input Text" library="SeleniumLibrary">
@@ -21,8 +21,8 @@
 <arg>name:q</arg>
 <arg>ดูเหล็กไหล</arg>
 </arguments>
-<msg timestamp="20190924 12:34:31.556" level="INFO">Typing text 'ดูเหล็กไหล' into text field 'name:q'.</msg>
-<status status="PASS" starttime="20190924 12:34:31.556" endtime="20190924 12:34:31.660"></status>
+<msg timestamp="20190924 14:34:40.606" level="INFO">Typing text 'ดูเหล็กไหล' into text field 'name:q'.</msg>
+<status status="PASS" starttime="20190924 14:34:40.606" endtime="20190924 14:34:40.710"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -30,11 +30,11 @@
 <arg>name:q</arg>
 <arg>RETURN</arg>
 </arguments>
-<msg timestamp="20190924 12:34:31.660" level="INFO">Sending key(s) ('RETURN',) to name:q element.</msg>
-<msg timestamp="20190924 12:34:31.665" level="INFO">Pressing special key RETURN to element.</msg>
-<status status="PASS" starttime="20190924 12:34:31.660" endtime="20190924 12:34:33.575"></status>
+<msg timestamp="20190924 14:34:40.711" level="INFO">Sending key(s) ('RETURN',) to name:q element.</msg>
+<msg timestamp="20190924 14:34:40.716" level="INFO">Pressing special key RETURN to element.</msg>
+<status status="PASS" starttime="20190924 14:34:40.710" endtime="20190924 14:34:42.130"></status>
 </kw>
-<status status="PASS" starttime="20190924 12:34:31.555" endtime="20190924 12:34:33.575"></status>
+<status status="PASS" starttime="20190924 14:34:40.606" endtime="20190924 14:34:42.131"></status>
 </kw>
 <kw name="จะต้้องเจอดูเหล็กไหล">
 <kw name="Wait Until Element Contains" library="SeleniumLibrary">
@@ -43,13 +43,72 @@
 <arg>xpath://*[@id="tvcap"]/div/div/div/div/h3/span</arg>
 <arg>ดูเหล็กไหล</arg>
 </arguments>
-<status status="PASS" starttime="20190924 12:34:33.576" endtime="20190924 12:34:33.602"></status>
+<status status="PASS" starttime="20190924 14:34:42.131" endtime="20190924 14:34:42.158"></status>
 </kw>
-<status status="PASS" starttime="20190924 12:34:33.575" endtime="20190924 12:34:33.602"></status>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:resultStats</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20190924 14:34:42.178" level="INFO">${result} = ผลการค้นหาประมาณ 1,140,000 รายการ (0.43 วินาที) </msg>
+<status status="PASS" starttime="20190924 14:34:42.158" endtime="20190924 14:34:42.178"></status>
 </kw>
-<status status="PASS" starttime="20190924 12:34:29.231" endtime="20190924 12:34:33.602" critical="yes"></status>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>separator=${SPACE}</arg>
+<arg>max_split=3</arg>
+</arguments>
+<assign>
+<var>@{resultSplit}</var>
+</assign>
+<msg timestamp="20190924 14:34:42.179" level="INFO">@{resultSplit} = [ ผลการค้นหาประมาณ | 1,140,000 | รายการ | (0.43 วินาที)  ]</msg>
+<status status="PASS" starttime="20190924 14:34:42.178" endtime="20190924 14:34:42.179"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>.</arg>
+</arguments>
+<status status="PASS" starttime="20190924 14:34:42.179" endtime="20190924 14:34:42.179"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>0=&gt;${resultSplit}[0]</arg>
+</arguments>
+<status status="PASS" starttime="20190924 14:34:42.179" endtime="20190924 14:34:42.179"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>1=&gt;${resultSplit}[1]</arg>
+</arguments>
+<status status="PASS" starttime="20190924 14:34:42.179" endtime="20190924 14:34:42.180"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>2=&gt;${resultSplit}[2]</arg>
+</arguments>
+<status status="PASS" starttime="20190924 14:34:42.180" endtime="20190924 14:34:42.180"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>3=&gt;${resultSplit}[3]</arg>
+</arguments>
+<status status="PASS" starttime="20190924 14:34:42.180" endtime="20190924 14:34:42.180"></status>
+</kw>
+<status status="PASS" starttime="20190924 14:34:42.131" endtime="20190924 14:34:42.180"></status>
+</kw>
+<status status="PASS" starttime="20190924 14:34:38.199" endtime="20190924 14:34:42.181" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20190924 12:34:29.112" endtime="20190924 12:34:33.603"></status>
+<status status="PASS" starttime="20190924 14:34:38.081" endtime="20190924 14:34:42.181"></status>
 </suite>
 <statistics>
 <total>

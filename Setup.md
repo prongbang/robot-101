@@ -15,5 +15,5 @@ pip3 install --upgrade robotframework-seleniumlibrary
 Chromedriver
 
 ```
-export PATH=.:/Users/aycap/Development/Robot/chromedriver/:$PATH
+export PATH=.:/Users/<username>/Development/Robot/Workspaces/robot-101/chromedriver/:$PATH
 ```

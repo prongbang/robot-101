@@ -17,3 +17,7 @@ Chromedriver
 ```
 export PATH=.:/Users/<username>/Development/Robot/Workspaces/robot-101/chromedriver/:$PATH
 ```
+
+Documents
+
+https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html

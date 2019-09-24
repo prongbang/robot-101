@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.4 on darwin)" generated="20190924 16:32:53.831" rpa="false">
+<suite id="s1" name="Upload" source="/Users/aycap/Development/Robot/Workspaces/robot-101/upload/upload.robot">
+<test id="s1-t1" name="Upload File by Single">
+<kw name="Go to Web upload file">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://nervgh.github.io/pages/angular-file-upload/examples/simple/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20190924 16:32:54.004" level="INFO">Opening browser 'chrome' to base url 'http://nervgh.github.io/pages/angular-file-upload/examples/simple/'.</msg>
+<status status="PASS" starttime="20190924 16:32:54.004" endtime="20190924 16:32:57.590"></status>
+</kw>
+<status status="PASS" starttime="20190924 16:32:54.003" endtime="20190924 16:32:57.590"></status>
+</kw>
+<kw name="Select Single File 01.jpg">
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>//*[@id="ng-app"]/body/div/div[2]/div[1]/input[2]</arg>
+<arg>/Users/aycap/Development/Robot/Workspaces/robot-101/upload/images/01.jpg</arg>
+</arguments>
+<msg timestamp="20190924 16:32:57.591" level="INFO">Sending /Users/aycap/Development/Robot/Workspaces/robot-101/upload/images/01.jpg to browser.</msg>
+<status status="PASS" starttime="20190924 16:32:57.591" endtime="20190924 16:32:57.621"></status>
+</kw>
+<status status="PASS" starttime="20190924 16:32:57.590" endtime="20190924 16:32:57.621"></status>
+</kw>
+<kw name="Select Single File 02.jpg">
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>//*[@id="ng-app"]/body/div/div[2]/div[1]/input[2]</arg>
+<arg>/Users/aycap/Development/Robot/Workspaces/robot-101/upload/images/02.jpg</arg>
+</arguments>
+<msg timestamp="20190924 16:32:57.622" level="INFO">Sending /Users/aycap/Development/Robot/Workspaces/robot-101/upload/images/02.jpg to browser.</msg>
+<status status="PASS" starttime="20190924 16:32:57.621" endtime="20190924 16:32:57.641"></status>
+</kw>
+<status status="PASS" starttime="20190924 16:32:57.621" endtime="20190924 16:32:57.641"></status>
+</kw>
+<kw name="Select Single File 03.jpg">
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>//*[@id="ng-app"]/body/div/div[2]/div[1]/input[2]</arg>
+<arg>/Users/aycap/Development/Robot/Workspaces/robot-101/upload/images/03.jpg</arg>
+</arguments>
+<msg timestamp="20190924 16:32:57.642" level="INFO">Sending /Users/aycap/Development/Robot/Workspaces/robot-101/upload/images/03.jpg to browser.</msg>
+<status status="PASS" starttime="20190924 16:32:57.642" endtime="20190924 16:32:57.659"></status>
+</kw>
+<status status="PASS" starttime="20190924 16:32:57.641" endtime="20190924 16:32:57.659"></status>
+</kw>
+<kw name="Validate File Queue length before upload file">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>//*[@id="ng-app"]/body/div/div[2]/div[2]/p</arg>
+<arg>Queue length: 3</arg>
+</arguments>
+<status status="PASS" starttime="20190924 16:32:57.660" endtime="20190924 16:32:57.682"></status>
+</kw>
+<status status="PASS" starttime="20190924 16:32:57.660" endtime="20190924 16:32:57.683"></status>
+</kw>
+<kw name="Validate File Name before upload file">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>//*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[1]/td[1]/strong</arg>
+<arg>01.jpg</arg>
+</arguments>
+<status status="PASS" starttime="20190924 16:32:57.683" endtime="20190924 16:32:57.705"></status>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>//*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[2]/td[1]/strong</arg>
+<arg>02.jpg</arg>
+</arguments>
+<status status="PASS" starttime="20190924 16:32:57.705" endtime="20190924 16:32:57.726"></status>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>//*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[3]/td[1]/strong</arg>
+<arg>03.jpg</arg>
+</arguments>
+<status status="PASS" starttime="20190924 16:32:57.726" endtime="20190924 16:32:57.745"></status>
+</kw>
+<status status="PASS" starttime="20190924 16:32:57.683" endtime="20190924 16:32:57.745"></status>
+</kw>
+<kw name="Validate File Size before upload file">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>//*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[1]/td[2]</arg>
+<arg>0.07 MB</arg>
+</arguments>
+<status status="PASS" starttime="20190924 16:32:57.745" endtime="20190924 16:32:57.765"></status>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>//*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[2]/td[2]</arg>
+<arg>0.07 MB</arg>
+</arguments>
+<status status="PASS" starttime="20190924 16:32:57.765" endtime="20190924 16:32:57.784"></status>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>//*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[3]/td[2]</arg>
+<arg>0.23 MB</arg>
+</arguments>
+<status status="PASS" starttime="20190924 16:32:57.784" endtime="20190924 16:32:57.802"></status>
+</kw>
+<status status="PASS" starttime="20190924 16:32:57.745" endtime="20190924 16:32:57.803"></status>
+</kw>
+<kw name="Upload File 01.jpg is Success">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[1]/td[5]/button[1]</arg>
+</arguments>
+<msg timestamp="20190924 16:32:57.803" level="INFO">Clicking element '//*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[1]/td[5]/button[1]'.</msg>
+<status status="PASS" starttime="20190924 16:32:57.803" endtime="20190924 16:32:57.844"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//div[@style="width: 33%;"]</arg>
+</arguments>
+<status status="PASS" starttime="20190924 16:32:57.844" endtime="20190924 16:32:58.066"></status>
+</kw>
+<status status="PASS" starttime="20190924 16:32:57.803" endtime="20190924 16:32:58.066"></status>
+</kw>
+<kw name="Check Icon Status upload file 01.jpg is X">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//tr[1]/td[4]/span[3]/i[@class="glyphicon glyphicon-remove"]</arg>
+</arguments>
+<status status="PASS" starttime="20190924 16:32:58.067" endtime="20190924 16:32:58.076"></status>
+</kw>
+<status status="PASS" starttime="20190924 16:32:58.066" endtime="20190924 16:32:58.077"></status>
+</kw>
+<kw name="Upload File 02.jpg is Success">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[2]/td[5]/button[1]</arg>
+</arguments>
+<msg timestamp="20190924 16:32:58.077" level="INFO">Clicking element '//*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[2]/td[5]/button[1]'.</msg>
+<status status="PASS" starttime="20190924 16:32:58.077" endtime="20190924 16:32:58.117"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//div[@style="width: 67%;"]</arg>
+</arguments>
+<status status="PASS" starttime="20190924 16:32:58.117" endtime="20190924 16:32:58.337"></status>
+</kw>
+<status status="PASS" starttime="20190924 16:32:58.077" endtime="20190924 16:32:58.338"></status>
+</kw>
+<kw name="Check Icon Status upload file 02.jpg is X">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//tr[2]/td[4]/span[3]/i[@class="glyphicon glyphicon-remove"]</arg>
+</arguments>
+<status status="PASS" starttime="20190924 16:32:58.338" endtime="20190924 16:32:58.349"></status>
+</kw>
+<status status="PASS" starttime="20190924 16:32:58.338" endtime="20190924 16:32:58.349"></status>
+</kw>
+<kw name="Upload File 03.jpg is Success">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[3]/td[5]/button[1]</arg>
+</arguments>
+<msg timestamp="20190924 16:32:58.349" level="INFO">Clicking element '//*[@id="ng-app"]/body/div/div[2]/div[2]/table/tbody/tr[3]/td[5]/button[1]'.</msg>
+<status status="PASS" starttime="20190924 16:32:58.349" endtime="20190924 16:32:58.404"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//div[@style="width: 100%;"]</arg>
+</arguments>
+<status status="PASS" starttime="20190924 16:32:58.404" endtime="20190924 16:32:58.623"></status>
+</kw>
+<status status="PASS" starttime="20190924 16:32:58.349" endtime="20190924 16:32:58.623"></status>
+</kw>
+<kw name="Check Icon Status upload file 02.jpg is X">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//tr[2]/td[4]/span[3]/i[@class="glyphicon glyphicon-remove"]</arg>
+</arguments>
+<status status="PASS" starttime="20190924 16:32:58.623" endtime="20190924 16:32:58.631"></status>
+</kw>
+<status status="PASS" starttime="20190924 16:32:58.623" endtime="20190924 16:32:58.631"></status>
+</kw>
+<status status="PASS" starttime="20190924 16:32:54.003" endtime="20190924 16:32:58.631" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190924 16:32:53.832" endtime="20190924 16:32:58.632"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Upload">Upload</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

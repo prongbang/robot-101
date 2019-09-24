@@ -33,3 +33,11 @@ Library     String
     Log To Console  1=>${resultSplit}[1]
     Log To Console  2=>${resultSplit}[2]
     Log To Console  3=>${resultSplit}[3]
+
+    Should Be Equal As Integers     100     ${100}
+    Should Be Equal     ผลการค้นหาประมาณ     ${resultSplit}[0]
+    Should Be Equal     รายการ     ${resultSplit}[2]
+
+    ${cleanSpace}=     Remove String   ${resultSplit}[3]  ${SPACE}
+    Should Start With   ${cleanSpace}   (
+    Should End With     ${cleanSpace}   )

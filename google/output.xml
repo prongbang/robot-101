@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.4 on darwin)" generated="20190924 14:34:38.080" rpa="false">
+<robot generator="Robot 3.1.2 (Python 3.7.4 on darwin)" generated="20190924 14:54:31.583" rpa="false">
 <suite id="s1" name="Google" source="/Users/aycap/Development/Robot/Workspaces/robot-101/google/google.robot">
 <test id="s1-t1" name="ค้าหาคำว่าเหล็กไหล">
 <kw name="เข้าไปยังหน้าค้นหาของ Google">
@@ -9,10 +9,10 @@
 <arg>http://www.google.com</arg>
 <arg>headlesschrome</arg>
 </arguments>
-<msg timestamp="20190924 14:34:38.200" level="INFO">Opening browser 'headlesschrome' to base url 'http://www.google.com'.</msg>
-<status status="PASS" starttime="20190924 14:34:38.200" endtime="20190924 14:34:40.605"></status>
+<msg timestamp="20190924 14:54:31.780" level="INFO">Opening browser 'headlesschrome' to base url 'http://www.google.com'.</msg>
+<status status="PASS" starttime="20190924 14:54:31.780" endtime="20190924 14:54:34.583"></status>
 </kw>
-<status status="PASS" starttime="20190924 14:34:38.200" endtime="20190924 14:34:40.606"></status>
+<status status="PASS" starttime="20190924 14:54:31.780" endtime="20190924 14:54:34.584"></status>
 </kw>
 <kw name="ค้าหาเหล็กไหล">
 <kw name="Input Text" library="SeleniumLibrary">
@@ -21,8 +21,8 @@
 <arg>name:q</arg>
 <arg>ดูเหล็กไหล</arg>
 </arguments>
-<msg timestamp="20190924 14:34:40.606" level="INFO">Typing text 'ดูเหล็กไหล' into text field 'name:q'.</msg>
-<status status="PASS" starttime="20190924 14:34:40.606" endtime="20190924 14:34:40.710"></status>
+<msg timestamp="20190924 14:54:34.585" level="INFO">Typing text 'ดูเหล็กไหล' into text field 'name:q'.</msg>
+<status status="PASS" starttime="20190924 14:54:34.584" endtime="20190924 14:54:34.696"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
@@ -30,11 +30,11 @@
 <arg>name:q</arg>
 <arg>RETURN</arg>
 </arguments>
-<msg timestamp="20190924 14:34:40.711" level="INFO">Sending key(s) ('RETURN',) to name:q element.</msg>
-<msg timestamp="20190924 14:34:40.716" level="INFO">Pressing special key RETURN to element.</msg>
-<status status="PASS" starttime="20190924 14:34:40.710" endtime="20190924 14:34:42.130"></status>
+<msg timestamp="20190924 14:54:34.696" level="INFO">Sending key(s) ('RETURN',) to name:q element.</msg>
+<msg timestamp="20190924 14:54:34.702" level="INFO">Pressing special key RETURN to element.</msg>
+<status status="PASS" starttime="20190924 14:54:34.696" endtime="20190924 14:54:36.050"></status>
 </kw>
-<status status="PASS" starttime="20190924 14:34:40.606" endtime="20190924 14:34:42.131"></status>
+<status status="PASS" starttime="20190924 14:54:34.584" endtime="20190924 14:54:36.050"></status>
 </kw>
 <kw name="จะต้้องเจอดูเหล็กไหล">
 <kw name="Wait Until Element Contains" library="SeleniumLibrary">
@@ -43,7 +43,7 @@
 <arg>xpath://*[@id="tvcap"]/div/div/div/div/h3/span</arg>
 <arg>ดูเหล็กไหล</arg>
 </arguments>
-<status status="PASS" starttime="20190924 14:34:42.131" endtime="20190924 14:34:42.158"></status>
+<status status="PASS" starttime="20190924 14:54:36.051" endtime="20190924 14:54:36.076"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of the element identified by ``locator``.</doc>
@@ -53,8 +53,8 @@
 <assign>
 <var>${result}</var>
 </assign>
-<msg timestamp="20190924 14:34:42.178" level="INFO">${result} = ผลการค้นหาประมาณ 1,140,000 รายการ (0.43 วินาที) </msg>
-<status status="PASS" starttime="20190924 14:34:42.158" endtime="20190924 14:34:42.178"></status>
+<msg timestamp="20190924 14:54:36.096" level="INFO">${result} = ผลการค้นหาประมาณ 1,140,000 รายการ (0.28 วินาที) </msg>
+<status status="PASS" starttime="20190924 14:54:36.077" endtime="20190924 14:54:36.096"></status>
 </kw>
 <kw name="Split String" library="String">
 <doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
@@ -66,49 +66,104 @@
 <assign>
 <var>@{resultSplit}</var>
 </assign>
-<msg timestamp="20190924 14:34:42.179" level="INFO">@{resultSplit} = [ ผลการค้นหาประมาณ | 1,140,000 | รายการ | (0.43 วินาที)  ]</msg>
-<status status="PASS" starttime="20190924 14:34:42.178" endtime="20190924 14:34:42.179"></status>
+<msg timestamp="20190924 14:54:36.097" level="INFO">@{resultSplit} = [ ผลการค้นหาประมาณ | 1,140,000 | รายการ | (0.28 วินาที)  ]</msg>
+<status status="PASS" starttime="20190924 14:54:36.096" endtime="20190924 14:54:36.097"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>.</arg>
 </arguments>
-<status status="PASS" starttime="20190924 14:34:42.179" endtime="20190924 14:34:42.179"></status>
+<status status="PASS" starttime="20190924 14:54:36.097" endtime="20190924 14:54:36.097"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>0=&gt;${resultSplit}[0]</arg>
 </arguments>
-<status status="PASS" starttime="20190924 14:34:42.179" endtime="20190924 14:34:42.179"></status>
+<status status="PASS" starttime="20190924 14:54:36.097" endtime="20190924 14:54:36.097"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>1=&gt;${resultSplit}[1]</arg>
 </arguments>
-<status status="PASS" starttime="20190924 14:34:42.179" endtime="20190924 14:34:42.180"></status>
+<status status="PASS" starttime="20190924 14:54:36.097" endtime="20190924 14:54:36.098"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>2=&gt;${resultSplit}[2]</arg>
 </arguments>
-<status status="PASS" starttime="20190924 14:34:42.180" endtime="20190924 14:34:42.180"></status>
+<status status="PASS" starttime="20190924 14:54:36.098" endtime="20190924 14:54:36.098"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>3=&gt;${resultSplit}[3]</arg>
 </arguments>
-<status status="PASS" starttime="20190924 14:34:42.180" endtime="20190924 14:34:42.180"></status>
+<status status="PASS" starttime="20190924 14:54:36.098" endtime="20190924 14:54:36.098"></status>
 </kw>
-<status status="PASS" starttime="20190924 14:34:42.131" endtime="20190924 14:34:42.180"></status>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>100</arg>
+<arg>${100}</arg>
+</arguments>
+<msg timestamp="20190924 14:54:36.099" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20190924 14:54:36.099" endtime="20190924 14:54:36.099"></status>
 </kw>
-<status status="PASS" starttime="20190924 14:34:38.199" endtime="20190924 14:34:42.181" critical="yes"></status>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>ผลการค้นหาประมาณ</arg>
+<arg>${resultSplit}[0]</arg>
+</arguments>
+<status status="PASS" starttime="20190924 14:54:36.099" endtime="20190924 14:54:36.099"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>รายการ</arg>
+<arg>${resultSplit}[2]</arg>
+</arguments>
+<status status="PASS" starttime="20190924 14:54:36.099" endtime="20190924 14:54:36.100"></status>
+</kw>
+<kw name="Remove String" library="String">
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<arguments>
+<arg>${resultSplit}[3]</arg>
+<arg>${SPACE}</arg>
+</arguments>
+<assign>
+<var>${cleanSpace}</var>
+</assign>
+<msg timestamp="20190924 14:54:36.100" level="INFO">${cleanSpace} = (0.28วินาที)</msg>
+<status status="PASS" starttime="20190924 14:54:36.100" endtime="20190924 14:54:36.100"></status>
+</kw>
+<kw name="Should Start With" library="BuiltIn">
+<doc>Fails if the string ``str1`` does not start with the string ``str2``.</doc>
+<arguments>
+<arg>${cleanSpace}</arg>
+<arg>(</arg>
+</arguments>
+<status status="PASS" starttime="20190924 14:54:36.100" endtime="20190924 14:54:36.100"></status>
+</kw>
+<kw name="Should End With" library="BuiltIn">
+<doc>Fails if the string ``str1`` does not end with the string ``str2``.</doc>
+<arguments>
+<arg>${cleanSpace}</arg>
+<arg>)</arg>
+</arguments>
+<status status="PASS" starttime="20190924 14:54:36.100" endtime="20190924 14:54:36.101"></status>
+</kw>
+<status status="PASS" starttime="20190924 14:54:36.051" endtime="20190924 14:54:36.101"></status>
+</kw>
+<status status="PASS" starttime="20190924 14:54:31.778" endtime="20190924 14:54:36.101" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20190924 14:34:38.081" endtime="20190924 14:34:42.181"></status>
+<status status="PASS" starttime="20190924 14:54:31.584" endtime="20190924 14:54:36.101"></status>
 </suite>
 <statistics>
 <total>

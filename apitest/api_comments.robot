@@ -6,7 +6,12 @@ Library    String
 *** Variables ***
 
 *** Test Cases ***
-Get Comments
+Flow 1 
+    ${firstComment}=    Get First Comments
+    Log To Console      ${firstComment}
+
+*** Keywords ***
+Get First Comments
     Create Session  api   https://jsonplaceholder.typicode.com
     ${response}=  Get Request  api  /comments
 
@@ -27,3 +32,5 @@ Get Comments
     Should Contain Match    ${response.json()[0]}   name
     Should Contain Match    ${response.json()[0]}   email
     Should Contain Match    ${response.json()[0]}   body
+
+    [Return]    ${response.json()[0]}

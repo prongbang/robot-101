@@ -1,3 +1,3 @@
 google:
-	robot google.robot
+	robot -v URL:http://www.google.com google.robot
 

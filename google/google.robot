@@ -3,6 +3,7 @@ Library     SeleniumLibrary
 Library     String
 
 *** Variables ***
+${URL}      http://www.google.com
 
 *** Test Cases ***
 ค้าหาคำว่าเหล็กไหล
@@ -17,10 +18,24 @@ Library     String
     ค้าหาเหล็กไหล
     จะต้้องเจอดูเหล็กไหล
 
+ค้าหาคำว่าไออุ่น
+    [Tags]  Search3
+    ค้าหาคำว่า        ไออุ่น        # Arguments
+
 *** Keywords ***
+
+ค้าหาคำว่า
+    [Arguments]     ${keyword}
+    Input Text  name:q  ${keyword}
+    Press Keys  name:q  RETURN
+
+ค้าหาคำว่าv2  ${keyword}
+    Input Text  name:q  ${keyword}
+    Press Keys  name:q  RETURN
+
 เข้าไปยังหน้าค้นหาของ Google
-    Open Browser  http://www.google.com  headlesschrome
-    # Open Browser  http://www.google.com  chrome
+    Open Browser  ${URL}  headlesschrome
+    # Open Browser  ${URL}  chrome
 
 ค้าหาเหล็กไหล
     Input Text  name:q  ดูเหล็กไหล

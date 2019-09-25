@@ -10,7 +10,7 @@ Test Setup          Back to search page
 Default Tags        v1
 
 ***Variables
-
+${URL}      http://www.google.com
 
 **Test Cases
 Search 

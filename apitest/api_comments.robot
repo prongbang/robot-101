@@ -12,8 +12,8 @@ Flow 1
 
 *** Keywords ***
 Get First Comments
-    Create Session  api   https://jsonplaceholder.typicode.com
-    ${response}=  Get Request  api  /comments
+    Create Session  api-comment   https://jsonplaceholder.typicode.com
+    ${response}=  Get Request  api-comment  /comments
 
     # Status code = 200
     Should Be Equal     ${response.status_code}     ${200}

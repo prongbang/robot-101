@@ -22,11 +22,15 @@
 							"    pm.expect(jsonData.length).to.eql(500);",
 							"    pm.expect(jsonData[0].id).to.eql(1);",
 							"    pm.expect(jsonData[0].email).to.eql(\"Eliseo@gardner.biz\");",
+							"    ",
+							"    pm.globals.set(\"Email\", jsonData[0].email);",
 							"});",
 							"",
 							"pm.test(\"Response time is less than 200ms\", function () {",
 							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
-							"});"
+							"});",
+							"",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -45,6 +49,46 @@
 					],
 					"path": [
 						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Step 2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/comments?email={{Email}}",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"comments"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "{{Email}}"
+						}
 					]
 				}
 			},

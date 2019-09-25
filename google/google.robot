@@ -21,6 +21,7 @@ ${URL}      http://www.google.com
 ค้าหาคำว่าไออุ่น
     [Tags]  Search3
     ค้าหาคำว่า        ไออุ่น        # Arguments
+    ค้าหาคำว่าv2 ไออุ่น
 
 *** Keywords ***
 
@@ -29,7 +30,7 @@ ${URL}      http://www.google.com
     Input Text  name:q  ${keyword}
     Press Keys  name:q  RETURN
 
-ค้าหาคำว่าv2  ${keyword}
+ค้าหาคำว่าv2 ${keyword}
     Input Text  name:q  ${keyword}
     Press Keys  name:q  RETURN
 

@@ -12,6 +12,10 @@ pip3 install --upgrade selenium
 pip3 install --upgrade robotframework-seleniumlibrary
 ```
 
+```
+pip3 install robotframework-faker
+```
+
 Chromedriver
 
 ```

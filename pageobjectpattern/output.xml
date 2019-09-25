@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.4 on darwin)" generated="20190925 15:32:16.400" rpa="false">
+<suite id="s1" name="Page-Object-Pattern" source="/Users/aycap/Development/Robot/Workspaces/robot-101/pageobjectpattern/page-object-pattern.robot">
+<test id="s1-t1" name="นายโปร่งบางทำการสมัครสมาชิกในระบบ">
+<kw name="Loop">
+<kw name="${index} IN RANGE [ 1 | 11 ]" type="for">
+<kw name="${index} = 1" type="foritem">
+<kw name="Name Male" library="FakerLibrary">
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20190925 15:32:16.794" level="INFO">${name} = Jeffrey Rush</msg>
+<status status="PASS" starttime="20190925 15:32:16.793" endtime="20190925 15:32:16.794"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${index}=&gt;${name}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 15:32:16.794" endtime="20190925 15:32:16.794"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:16.793" endtime="20190925 15:32:16.794"></status>
+</kw>
+<kw name="${index} = 2" type="foritem">
+<kw name="Name Male" library="FakerLibrary">
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20190925 15:32:16.795" level="INFO">${name} = Cory Gonzalez</msg>
+<status status="PASS" starttime="20190925 15:32:16.795" endtime="20190925 15:32:16.795"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${index}=&gt;${name}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 15:32:16.795" endtime="20190925 15:32:16.795"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:16.794" endtime="20190925 15:32:16.796"></status>
+</kw>
+<kw name="${index} = 3" type="foritem">
+<kw name="Name Male" library="FakerLibrary">
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20190925 15:32:16.796" level="INFO">${name} = Donald Collins</msg>
+<status status="PASS" starttime="20190925 15:32:16.796" endtime="20190925 15:32:16.796"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${index}=&gt;${name}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 15:32:16.796" endtime="20190925 15:32:16.796"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:16.796" endtime="20190925 15:32:16.797"></status>
+</kw>
+<kw name="${index} = 4" type="foritem">
+<kw name="Name Male" library="FakerLibrary">
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20190925 15:32:16.797" level="INFO">${name} = Mark Mcdowell</msg>
+<status status="PASS" starttime="20190925 15:32:16.797" endtime="20190925 15:32:16.797"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${index}=&gt;${name}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 15:32:16.797" endtime="20190925 15:32:16.798"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:16.797" endtime="20190925 15:32:16.798"></status>
+</kw>
+<kw name="${index} = 5" type="foritem">
+<kw name="Name Male" library="FakerLibrary">
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20190925 15:32:16.798" level="INFO">${name} = Alexander Brown</msg>
+<status status="PASS" starttime="20190925 15:32:16.798" endtime="20190925 15:32:16.798"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${index}=&gt;${name}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 15:32:16.798" endtime="20190925 15:32:16.799"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:16.798" endtime="20190925 15:32:16.799"></status>
+</kw>
+<kw name="${index} = 6" type="foritem">
+<kw name="Name Male" library="FakerLibrary">
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20190925 15:32:16.799" level="INFO">${name} = Michael Perez</msg>
+<status status="PASS" starttime="20190925 15:32:16.799" endtime="20190925 15:32:16.799"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${index}=&gt;${name}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 15:32:16.800" endtime="20190925 15:32:16.800"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:16.799" endtime="20190925 15:32:16.800"></status>
+</kw>
+<kw name="${index} = 7" type="foritem">
+<kw name="Name Male" library="FakerLibrary">
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20190925 15:32:16.802" level="INFO">${name} = Michael Thomas</msg>
+<status status="PASS" starttime="20190925 15:32:16.800" endtime="20190925 15:32:16.802"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${index}=&gt;${name}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 15:32:16.803" endtime="20190925 15:32:16.803"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:16.800" endtime="20190925 15:32:16.803"></status>
+</kw>
+<kw name="${index} = 8" type="foritem">
+<kw name="Name Male" library="FakerLibrary">
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20190925 15:32:16.804" level="INFO">${name} = Jack Price</msg>
+<status status="PASS" starttime="20190925 15:32:16.803" endtime="20190925 15:32:16.804"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${index}=&gt;${name}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 15:32:16.804" endtime="20190925 15:32:16.804"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:16.803" endtime="20190925 15:32:16.804"></status>
+</kw>
+<kw name="${index} = 9" type="foritem">
+<kw name="Name Male" library="FakerLibrary">
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20190925 15:32:16.805" level="INFO">${name} = Daniel Anderson</msg>
+<status status="PASS" starttime="20190925 15:32:16.805" endtime="20190925 15:32:16.805"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${index}=&gt;${name}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 15:32:16.805" endtime="20190925 15:32:16.806"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:16.804" endtime="20190925 15:32:16.806"></status>
+</kw>
+<kw name="${index} = 10" type="foritem">
+<kw name="Name Male" library="FakerLibrary">
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20190925 15:32:16.806" level="INFO">${name} = Jonathan Richards MD</msg>
+<status status="PASS" starttime="20190925 15:32:16.806" endtime="20190925 15:32:16.806"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${index}=&gt;${name}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 15:32:16.806" endtime="20190925 15:32:16.807"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:16.806" endtime="20190925 15:32:16.807"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:16.793" endtime="20190925 15:32:16.807"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:16.793" endtime="20190925 15:32:16.807"></status>
+</kw>
+<kw name="กรอกชื่อ &quot;prong&quot; นามสกุล &quot;bang&quot;">
+<kw name="Open To Browser" library="signup_page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>headlesschrome</arg>
+</arguments>
+<msg timestamp="20190925 15:32:16.808" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.kimschiller.com/page-object-pattern-tutorial/'.</msg>
+<status status="PASS" starttime="20190925 15:32:16.808" endtime="20190925 15:32:18.798"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:16.807" endtime="20190925 15:32:18.798"></status>
+</kw>
+<kw name="Fill In Firstname &quot;${firstname}&quot;" library="signup_page">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:firstname</arg>
+<arg>${firstname}</arg>
+</arguments>
+<msg timestamp="20190925 15:32:18.799" level="INFO">Typing text 'prong' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20190925 15:32:18.799" endtime="20190925 15:32:18.901"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:18.798" endtime="20190925 15:32:18.901"></status>
+</kw>
+<kw name="Fill In Lastname &quot;${lastname}&quot;" library="signup_page">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:lastname</arg>
+<arg>${lastname}</arg>
+</arguments>
+<msg timestamp="20190925 15:32:18.902" level="INFO">Typing text 'bang' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20190925 15:32:18.902" endtime="20190925 15:32:18.952"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:18.901" endtime="20190925 15:32:18.952"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:16.807" endtime="20190925 15:32:18.952"></status>
+</kw>
+<kw name="กรอกที่อยู่ &quot;Bangkok, Thailand&quot; &quot;10400&quot;">
+<kw name="Fill In Address &quot;${address}&quot;" library="signup_page">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:address</arg>
+<arg>${address}</arg>
+</arguments>
+<msg timestamp="20190925 15:32:18.953" level="INFO">Typing text 'Bangkok, Thailand' into text field 'id:address'.</msg>
+<status status="PASS" starttime="20190925 15:32:18.953" endtime="20190925 15:32:19.016"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:18.953" endtime="20190925 15:32:19.016"></status>
+</kw>
+<kw name="Fill In Zipcode &quot;${zipcode}&quot;" library="signup_page">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:zipcode</arg>
+<arg>${zipcode}</arg>
+</arguments>
+<msg timestamp="20190925 15:32:19.017" level="INFO">Typing text '10400' into text field 'id:zipcode'.</msg>
+<status status="PASS" starttime="20190925 15:32:19.017" endtime="20190925 15:32:19.062"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:19.016" endtime="20190925 15:32:19.062"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:18.953" endtime="20190925 15:32:19.062"></status>
+</kw>
+<kw name="ทำการส่งข้อมูลการสมัคร">
+<kw name="SignUp" library="signup_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:signup</arg>
+</arguments>
+<msg timestamp="20190925 15:32:19.063" level="INFO">Clicking element 'id:signup'.</msg>
+<status status="PASS" starttime="20190925 15:32:19.063" endtime="20190925 15:32:19.610"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:19.062" endtime="20190925 15:32:19.610"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:19.062" endtime="20190925 15:32:19.610"></status>
+</kw>
+<kw name="สมัครสำเร็จ ต้องแสดงคำว่า &quot;Thank you!&quot;">
+<kw name="ThankYou ${message}" library="thank_page">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${message}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 15:32:19.611" endtime="20190925 15:32:19.624"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:19.611" endtime="20190925 15:32:19.624"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:19.611" endtime="20190925 15:32:19.624"></status>
+</kw>
+<status status="PASS" starttime="20190925 15:32:16.791" endtime="20190925 15:32:19.624" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190925 15:32:16.401" endtime="20190925 15:32:19.625"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Page-Object-Pattern">Page-Object-Pattern</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

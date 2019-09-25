@@ -9,6 +9,7 @@ Library    String
 Flow 1 
     ${firstComment}=    Get First Comments
     Log To Console      ${firstComment}
+    Post Comments
 
 *** Keywords ***
 Get First Comments
@@ -34,3 +35,8 @@ Get First Comments
     Should Contain Match    ${response.json()[0]}   body
 
     [Return]    ${response.json()[0]}
+
+Post Comments
+    Create Session  api-comment   https://jsonplaceholder.typicode.com
+    ${response}=  Post Request  api-comment  /comments
+    Should Be Equal     ${response.status_code}     ${201}

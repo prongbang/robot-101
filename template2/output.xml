@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.4 on darwin)" generated="20190925 11:40:28.309" rpa="false">
+<suite id="s1" name="Template2" source="/Users/aycap/Development/Robot/Workspaces/robot-101/template2/template2.robot">
+<kw name="Open Browser to google" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>headlesschrome</arg>
+</arguments>
+<msg timestamp="20190925 11:40:28.419" level="INFO">Opening browser 'headlesschrome' to base url 'http://www.google.com'.</msg>
+<status status="PASS" starttime="20190925 11:40:28.419" endtime="20190925 11:40:30.738"></status>
+</kw>
+<status status="PASS" starttime="20190925 11:40:28.418" endtime="20190925 11:40:30.738"></status>
+</kw>
+<test id="s1-t1" name="Search">
+<kw name="Back to search page" type="setup">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20190925 11:40:30.739" level="INFO">Opening url 'http://www.google.com'</msg>
+<status status="PASS" starttime="20190925 11:40:30.739" endtime="20190925 11:40:30.994"></status>
+</kw>
+<status status="PASS" starttime="20190925 11:40:30.739" endtime="20190925 11:40:30.994"></status>
+</kw>
+<kw name="Search Template">
+<arguments>
+<arg>robotframework</arg>
+<arg>robotframework</arg>
+</arguments>
+<kw name="ค้าหาคำว่า">
+<arguments>
+<arg>${keyword}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:q</arg>
+<arg>${keyword}</arg>
+</arguments>
+<msg timestamp="20190925 11:40:30.995" level="INFO">Typing text 'robotframework' into text field 'name:q'.</msg>
+<status status="PASS" starttime="20190925 11:40:30.995" endtime="20190925 11:40:31.106"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>name:q</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20190925 11:40:31.106" level="INFO">Sending key(s) ('RETURN',) to name:q element.</msg>
+<msg timestamp="20190925 11:40:31.111" level="INFO">Pressing special key RETURN to element.</msg>
+<status status="PASS" starttime="20190925 11:40:31.106" endtime="20190925 11:40:32.103"></status>
+</kw>
+<status status="PASS" starttime="20190925 11:40:30.995" endtime="20190925 11:40:32.103"></status>
+</kw>
+<kw name="ต้องเจอ">
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>//*[@id="brs"]/g-section-with-header/div[1]/h3</arg>
+<arg>${expectedResult}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 11:40:32.104" endtime="20190925 11:40:32.130"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:med.dPAwzb</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20190925 11:40:32.144" level="INFO">${result} = การค้นหาที่เกี่ยวข้องกับ robotframework</msg>
+<status status="PASS" starttime="20190925 11:40:32.130" endtime="20190925 11:40:32.145"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 11:40:32.145" endtime="20190925 11:40:32.145"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 11:40:32.145" endtime="20190925 11:40:32.145"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>การค้นหาที่เกี่ยวข้องกับ ${expectedResult}</arg>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 11:40:32.145" endtime="20190925 11:40:32.146"></status>
+</kw>
+<status status="PASS" starttime="20190925 11:40:32.103" endtime="20190925 11:40:32.146"></status>
+</kw>
+<status status="PASS" starttime="20190925 11:40:30.994" endtime="20190925 11:40:32.146"></status>
+</kw>
+<kw name="Search Template">
+<arguments>
+<arg>Kotlin</arg>
+<arg>Kotlin</arg>
+</arguments>
+<kw name="ค้าหาคำว่า">
+<arguments>
+<arg>${keyword}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:q</arg>
+<arg>${keyword}</arg>
+</arguments>
+<msg timestamp="20190925 11:40:32.147" level="INFO">Typing text 'Kotlin' into text field 'name:q'.</msg>
+<status status="PASS" starttime="20190925 11:40:32.147" endtime="20190925 11:40:32.237"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>name:q</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20190925 11:40:32.237" level="INFO">Sending key(s) ('RETURN',) to name:q element.</msg>
+<msg timestamp="20190925 11:40:32.243" level="INFO">Pressing special key RETURN to element.</msg>
+<status status="PASS" starttime="20190925 11:40:32.237" endtime="20190925 11:40:33.350"></status>
+</kw>
+<status status="PASS" starttime="20190925 11:40:32.146" endtime="20190925 11:40:33.351"></status>
+</kw>
+<kw name="ต้องเจอ">
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>//*[@id="brs"]/g-section-with-header/div[1]/h3</arg>
+<arg>${expectedResult}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 11:40:33.351" endtime="20190925 11:40:33.370"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:med.dPAwzb</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20190925 11:40:33.381" level="INFO">${result} = การค้นหาที่เกี่ยวข้องกับ Kotlin</msg>
+<status status="PASS" starttime="20190925 11:40:33.370" endtime="20190925 11:40:33.381"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 11:40:33.382" endtime="20190925 11:40:33.382"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 11:40:33.382" endtime="20190925 11:40:33.382"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>การค้นหาที่เกี่ยวข้องกับ ${expectedResult}</arg>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 11:40:33.382" endtime="20190925 11:40:33.383"></status>
+</kw>
+<status status="PASS" starttime="20190925 11:40:33.351" endtime="20190925 11:40:33.383"></status>
+</kw>
+<status status="PASS" starttime="20190925 11:40:32.146" endtime="20190925 11:40:33.383"></status>
+</kw>
+<kw name="Search Template">
+<arguments>
+<arg>Java</arg>
+<arg>Java</arg>
+</arguments>
+<kw name="ค้าหาคำว่า">
+<arguments>
+<arg>${keyword}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:q</arg>
+<arg>${keyword}</arg>
+</arguments>
+<msg timestamp="20190925 11:40:33.384" level="INFO">Typing text 'Java' into text field 'name:q'.</msg>
+<status status="PASS" starttime="20190925 11:40:33.383" endtime="20190925 11:40:33.478"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>name:q</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20190925 11:40:33.479" level="INFO">Sending key(s) ('RETURN',) to name:q element.</msg>
+<msg timestamp="20190925 11:40:33.485" level="INFO">Pressing special key RETURN to element.</msg>
+<status status="PASS" starttime="20190925 11:40:33.479" endtime="20190925 11:40:34.398"></status>
+</kw>
+<status status="PASS" starttime="20190925 11:40:33.383" endtime="20190925 11:40:34.398"></status>
+</kw>
+<kw name="ต้องเจอ">
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>//*[@id="brs"]/g-section-with-header/div[1]/h3</arg>
+<arg>${expectedResult}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 11:40:34.399" endtime="20190925 11:40:34.416"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:med.dPAwzb</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20190925 11:40:34.427" level="INFO">${result} = การค้นหาที่เกี่ยวข้องกับ Java</msg>
+<status status="PASS" starttime="20190925 11:40:34.416" endtime="20190925 11:40:34.427"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 11:40:34.427" endtime="20190925 11:40:34.427"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 11:40:34.427" endtime="20190925 11:40:34.428"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>การค้นหาที่เกี่ยวข้องกับ ${expectedResult}</arg>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 11:40:34.428" endtime="20190925 11:40:34.428"></status>
+</kw>
+<status status="PASS" starttime="20190925 11:40:34.398" endtime="20190925 11:40:34.428"></status>
+</kw>
+<status status="PASS" starttime="20190925 11:40:33.383" endtime="20190925 11:40:34.428"></status>
+</kw>
+<kw name="Search Template">
+<arguments>
+<arg>Golang</arg>
+<arg>Golang</arg>
+</arguments>
+<kw name="ค้าหาคำว่า">
+<arguments>
+<arg>${keyword}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:q</arg>
+<arg>${keyword}</arg>
+</arguments>
+<msg timestamp="20190925 11:40:34.429" level="INFO">Typing text 'Golang' into text field 'name:q'.</msg>
+<status status="PASS" starttime="20190925 11:40:34.429" endtime="20190925 11:40:34.572"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>name:q</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20190925 11:40:34.572" level="INFO">Sending key(s) ('RETURN',) to name:q element.</msg>
+<msg timestamp="20190925 11:40:34.577" level="INFO">Pressing special key RETURN to element.</msg>
+<status status="PASS" starttime="20190925 11:40:34.572" endtime="20190925 11:40:35.455"></status>
+</kw>
+<status status="PASS" starttime="20190925 11:40:34.428" endtime="20190925 11:40:35.455"></status>
+</kw>
+<kw name="ต้องเจอ">
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>//*[@id="brs"]/g-section-with-header/div[1]/h3</arg>
+<arg>${expectedResult}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 11:40:35.455" endtime="20190925 11:40:35.476"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:med.dPAwzb</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20190925 11:40:35.531" level="INFO">${result} = การค้นหาที่เกี่ยวข้องกับ Golang</msg>
+<status status="PASS" starttime="20190925 11:40:35.476" endtime="20190925 11:40:35.531"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 11:40:35.531" endtime="20190925 11:40:35.531"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 11:40:35.531" endtime="20190925 11:40:35.531"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>การค้นหาที่เกี่ยวข้องกับ ${expectedResult}</arg>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" starttime="20190925 11:40:35.532" endtime="20190925 11:40:35.532"></status>
+</kw>
+<status status="PASS" starttime="20190925 11:40:35.455" endtime="20190925 11:40:35.532"></status>
+</kw>
+<status status="PASS" starttime="20190925 11:40:34.428" endtime="20190925 11:40:35.532"></status>
+</kw>
+<tags>
+<tag>v1</tag>
+</tags>
+<status status="PASS" starttime="20190925 11:40:30.738" endtime="20190925 11:40:35.532" critical="yes"></status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190925 11:40:35.533" endtime="20190925 11:40:35.604"></status>
+</kw>
+<status status="PASS" starttime="20190925 11:40:28.310" endtime="20190925 11:40:35.604"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">v1</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Template2">Template2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

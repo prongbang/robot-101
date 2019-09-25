@@ -1,14 +1,14 @@
 ***Settings
 Library             SeleniumLibrary
 Library             String
-# Resource          resource/sample.robot
+Resource            ../resource/sample-shared.robot
 Suite Setup         Open Browser to google
 Suite Teardown      Close Browser
 Test Setup          Back to search page
 Test Template       Search Template
 
 ***Variables
-${URL}      http://www.google.com
+
 
 **Test Cases
 #
@@ -27,12 +27,6 @@ Search Template
     [Arguments]     ${keyword}
     Input Text  name:q  ${keyword}
     Press Keys  name:q  RETURN
-
-Open Browser to google
-    Open Browser  ${URL}  headlesschrome
-
-Back to search page
-    Go To   ${URL}
 
 ต้องเจอ
     [Arguments]     ${expectedResult}
